@@ -7,7 +7,6 @@ const checkbox = document.querySelector('.checkbox');
 const headerNav = document.querySelector('.header__nav');
 // checkbox.checked = true;
 
-console.log(newfeaturetest);
 
 hamburger.addEventListener('click', function () {
   
