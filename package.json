@@ -1,0 +1,14 @@
+{
+  "name": "annefluencer",
+  "version": "1.0.0",
+  "description": "annefluencer website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "author": "Michael Hingpit",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

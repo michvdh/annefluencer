@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annefluencer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- ----- -->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/anne-icon.png">
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+  <script defer src="script.js"></script>
+</head>
+
+<body class="sticky">
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "108679286447475");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v12.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <header class="header shadow blur">
+    <section class="section header__section">
+      <a href="#" class="header__link">
+        <img src="img/annefluencer-logo.png" alt="Annefluencer Logo" class="header__logo">
+      </a>
+
+      <input type="checkbox" class="checkbox" id="navi-toggle">
+      <label for="navi-toggle" class="mobile-nav">
+        <span class="mobile-nav__icon">&nbsp;</span>
+      </label>
+      <!-- <div class="mobile-nav__bg"></div> -->
+
+      <nav class="nav header__nav">
+        <ul class="nav__list header__nav__list">
+          <li class="nav__item header__nav__list__item">
+            <a href="#reviews" class="header__link header__link--reg">Reviews</a>
+          </li>
+          <li class="nav__item header__nav__list__item">
+            <a href="#healthcare" class="header__link header__link--reg">Healthcare</a>
+          </li>
+          <li class="nav__item header__nav__list__item">
+            <a href="#about-me" class="header__link header__link--reg">About Me</a>
+          </li>
+          <li class="nav__item header__nav__list__item">
+            <a href="#lets-connect" class="btn header__link">Let's Connect</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <main class="main">
+    <section class="main__section section hero section__hidden">
+      <div class="hero__text">
+        <h1 class="hero__text__header--main">Anne Nathalie</h1>
+        <h2 class="hero__text__header--secondary">Certified Maxicare Agent</h2>
+        <h3 class="hero__text__header--tertiary">Message me to know the best health insurance for you, your family, and
+          business.</h3>
+        <a target="_blank" href="http://bit.ly/WorkWithAnne" class="btn btn--dark btn--hero hero__btn">Message me</a>
+      </div>
+      <div class="hero__media">
+        <div class="hero__media__container shadow">
+          <iframe class="hero__media--video lazy-img" src="img/plan - affordable health insurance - lazy.jpg"
+            data-src="https://www.youtube.com/embed/8duONp_GOq4" title="Hero Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <!-- <div class="hero__media__container shadow">
+          <iframe class="hero__media--video lazy-img" src="img/plan - affordable health insurance - lazy.jpg"
+            data-src="https://www.youtube.com/embed/8duONp_GOq4?autoplay=1&mute=0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div> -->
+      </div>
+      <div class="hero__design hero__design--1"></div>
+      <div class="hero__design hero__design--2"> </div>
+      <div class="hero__design hero__design--3"> </div>
+    </section>
+
+    <section class="main__section section reviews section__reveal" id="reviews">
+      <h1 class="section__header reviews__header">What my Clients are Saying</h1>
+      <div class="reviews__stars">
+        <svg xmlns="http://www.w3.org/2000/svg" class="reviews__stars__star h-5 w-5" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path
+            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="reviews__stars__star h-5 w-5" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path
+            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="reviews__stars__star h-5 w-5" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path
+            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="reviews__stars__star h-5 w-5" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path
+            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="reviews__stars__star h-5 w-5" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path
+            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      </div>
+
+      <div class="slider">
+
+        <!-- ------------------ SHORT REVIEWS ------------------ -->
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/isobelle.maureen/posts/2015424448625367"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                It's always a smooth-sailing transaction with Ms.Nathalie. ✨ This is my 3rd Plan with her already. She
+                is very approachable and answers all questions with clarity. ✨Highly recommended! Keep up the good work
+                Ms.Nat! Kudos!✨
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Jennivieve Abelgas Caminero.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Jennivieve Abelgas Caminero</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/heide.paris/posts/10219173716630756"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Highly recommended 💯. She's very helpful & attentive to our needs right from the beginning to the end.
+                She will tell you exactly what you need to know & what you really need!.🔅Professional but still has a
+                soft heart for her clients. Thank you very much for your help Anne! ❤️
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Heide Paris.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Heide Paris</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/zel47/posts/10220784962034147"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Superb agent! Friendly and very accommodating. She really extended her time around 1:35AM just to
+                process my plans. Sweet! She added, this is her way of giving back to the community which is quite
+                remarkable! Keep up your excellent service, Miss Anne! 👏💕
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Sel Berdin.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Sel Berdin</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/marathesa.cotejar/posts/10221116832370189"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Huge thank you, Ms. Anne, for assisting me with my maxicare plan all throughout! A family member
+                referred me over to her and even if we didn’t know each other personally, she was very accommodating and
+                trustworthy. 🤗💕
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Mara Thesa Cotejar.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Mara Thesa Cotejar</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/aresco.lucy/posts/4767972443224502"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                I had a great time in availing the Maxicare Eready Advance Titanium through the assistance of Ms. Anne
+                Nathalie. it was so fast and easy for a senior citizen like me. Ms. Anne Nathalie is very professional
+                and intelligent. She is an asset to Maxicare.
+                <br>
+                Thank you and more power!
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Aresco Lucy.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Aresco Lucy</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/myralahoylahoy/posts/10158246359871551"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                I saw her on Youtube while searching for info about Maxicare. It's very informative and I immediately
+                felt that she is trustworthy. She is very responsive and patient with my queries. She's also courteous
+                and proactive. She helped me with the registration of my health cards. I highly recommend her.
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Myra Lahoylahoy.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Myra Lahoylahoy</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank"
+              href="https://www.facebook.com/permalink.php?story_fbid=1724718877721417&id=100005499646253"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                So happy si Anne ang unang Maxicare agent na nakita ko, she's very helpful kaya naging smooth ang
+                application process ng nanay ko. Sulit na sulit ng nanay ko ang Prima Gold card dahil nagamit nya agad
+                after registration using the temporary ecard.
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Mart Cano.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Mart Cano</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/ricajoy.brotonel.22/posts/983667305529683"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Very accommodating and knows her job. Super thankful kay Ms. Anne dahil naging smooth yung
+                re-application ko sa Maxicare. Thank you Ms. Anne!
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Rica Joy Brotonel Cerda.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Rica Joy Brotonel Cerda</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank"
+              href="https://www.facebook.com/permalink.php?story_fbid=1512695562415294&id=100010245935125"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                You really sound professional and knows everything about the product. Hindi rin kayo nagmimislead ng
+                client just to have sales. You gave right information and right expectations po.
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Darlene Dela Cruz.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Darlene Dela Cruz</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/jeff.manalo/posts/10159183945299137"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Anne has been providing an excellent service for our family account. She is able to answer all our
+                questions, and explain very clearly the details of every product.
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Jeff Manalo.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Jeff Manalo</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/munik.gibe/posts/4052183911503059"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Ms. Anne is so accomodating. She knows her job well. She's also very patient in answering my endless
+                queries. It wasn't difficult to talk to her about my concerns on Maxicare. Thanks for every inch of
+                assistance Ms. Anne. It never goes unappreciated. 😊
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Monic Gibe.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Monic Gibe</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/joannamarie.jusay/posts/6246694928677687"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Ms. Anne will accommodate you every step of they way and she really made sure that you know their
+                product. Her youtube videos about their products were very helpful for you to decide as well. 😊
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Joanna Jusay.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Joanna Jusay</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/maryjean.urmanita/posts/4099306983482047"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Ms Anne Natalie is very reliable, trusted advisor/agent.. I got my Card in less than 20 minutes.. Very
+                accommodating and have patience. More Client for you Mam
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Mary Jean Ferrer Urmanita.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Mary Jean Ferrer Urmanita</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/sutafeni.abejo/posts/4441059549243192"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Ms. Anne is a legitimate Maxicare agent. She really knows her job. Very accommodating and patient. Her
+                videos are informative and entertaining.
+                <br>
+                Thank you, Ms. Anne! God bless. 😊❤️
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Staph Abejo.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Staph Abejo</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--short">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/AZILA123/posts/10223358419461437"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Thankful to Ms. Anne for being nice and accomodating. She's very patient on explaining about my
+                concerns. Very efficient and I had a smooth transactions with her. Great! Thanks again Ms. Anne😊
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Alyssa Mateo.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Alyssa Mateo</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- ------------------ AVERAGE REVIEWS ------------------ -->
+
+        <div class="slider__slide slider__slide--average">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/ricajanep/posts/10221135794169866"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                The best ka Miss Anne! super accomodating and anjan ka parin nong gamitin kona yung Eready Advance!
+                Super worth it nang insurance grabe, bill namin kanina almost 50k personal items lang nabayaran ko 200
+                pesos sa hospital, worth it 2950 ko sa insurance dami nagulat nong sinabi ko sa parents and pinsan ko na
+                1 time payment may insurance kana 😍
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Rica Perez.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Rica Perez</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--average">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/maikeelovesdamonsalvatoreeee/posts/5065140283516436"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                I never had any issues applying for my first health card with Ms. Anne. She's very nice and friendly,
+                she provides helpful info and she's always willing to answer all my questions. Payment reminders and
+                notifications were sent prior to my 2nd due date (Which I absolutely need haha life's so busy! 😂) I'm
+                happy with my chosen plan and her excellent service! ❤️ You guys should get your own now, HMO should be
+                a priority especially these days. Highly recommended! 🙏
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Moo Reetz.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Moo Reetz</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--average">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/annajeanf/posts/10226196137471176"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Ms. Anne is soooo accommodating. She answers all our queries re the health card. She would give a
+                comprehensive explanation to each question. Not to mention, she is sooo sweet. I feel like I am talking
+                to an old friend. If you're still thinking about getting a health card, message Ms. Anne and you'll
+                surely understand everything in a jiffy. Thanks, Ms. Anne! More power to you. ❤️
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Anna Jean Fernandez Zabala.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Anna Jean Fernandez Zabala</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--average">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/lourianne.dupal.caluza/posts/10159398985155140"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                If I can give thousand Stars to this very smart and pretty lady, I will💞. Most accomodating and
+                approachable. Never naging half hearted when it comes to helping my issues which are a lot. She's like
+                your best friend na you can lean on whatever concerns you have. I can't thank you enough Miss Anne and
+                you know that. Sure na sure na babalik sayo next time.😘Keep safe always💞💞💞
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Lourianne Dupal Caluza.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Lourianne Dupal Caluza</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="slider__slide slider__slide--average">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/drtrazo/posts/10208863193092723"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Ma'am Anne, was very entertaining, informative and patient regarding my inquiries. I didn't decide right
+                away but kept discussing with her for a couple of months. She was very accomodating all the way without
+                loss of enthusiasm to answer my enquiries. I highly recommend her to anybody as their agent. Godbless
+                and keep safe ta tanan!.. 🤗😇
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Ozart Dav.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Ozart Dav</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--average">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/phoebeann.pocoy/posts/4042764915763285"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                At first, I am very lucky to have Miss Anne as my agent because she is really approachable and she
+                really elaborate every questions I have. She really know how to handle different type of person. And
+                now, I am already a - Ready Titanium Member! ♥️ Thanks to Miss Anne ❤️😊😘 God Bless 🙂 Dili jud mu mag
+                mahay if siya ang Agent nimo 🙂
+                <br>
+                -Bohol ❤️
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Phoebe Ann Pocoy.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Phoebe Ann Pocoy</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--average">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/ryan.doblin/posts/3587597944630611"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                First I'm very thank full for miss anne for helping me and answering all my questions about the product.
+                Aside from knowledgeable about it, she is also very honest and direct to her answers. I like the way how
+                being patient she is to me I will surely recommend her to all my friends and also the maxicare. Thanks
+                Miss Anne Got my e-card for my mom
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Ryan Doblin.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Ryan Doblin</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--average">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/julie.natividad.52/posts/10158600948438652"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Availing the Maxicare EReady Cards for my family was a breeze with the help of Anne. She handles
+                questions very professionally and you can feel her sincerity to help you. She is an expert and has all
+                the answers to your questions. Do not heaistate to message her if you need help with HMO coverage for
+                your family. Thank you Anne for the wonderful customer service and God bless your advocacy.
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Julie Natividad Supe.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Julie Natividad Supe</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--average">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/jygarciano/posts/10217923326780324"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Hands down one of their best agents. Anne is extremely helpful in making sure you understand every
+                aspect of getting an insurance coverage( Eready Advance). She will show you the policy and answer every
+                question promptly. In addition, very infomative with the vlogs she made. 😁. No trouble in payment as it
+                is done online. Thank you Anne! 😁
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Jygar Garciano.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Jygar Garciano</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- ------------------ LONG REVIEWS ------------------ -->
+
+        <div class="slider__slide slider__slide--long">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/MANEQUINNED/posts/4317149251716956"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Best Agent!!!! Lahat ng questions ko sinasagot nya ng maayos 🙏🏻 Sa Loa ng anak ko, inasikaso niya
+                talaga because we need to submit it 3days before the procedure ❤️ I saw her sa youtube nung nagssearch
+                ako about sa Maxicare plan, halos lahat ata ng vids nya napanood ko and yes sobrang linaw ng
+                explanations 😄 Alam mo yung pag ka-chat ko si Ms.Anne, naririnig ko yung lovely voice nya sa youtube I
+                swear ✋😅 Thankyou so much for helping us talaga 😍 Hulog ka ng langit!
+                <br>
+                Share ko lang din yung shirt na nabili ko Ms. Anne, ikaw talaga naalala ko. Actually I'm wearing this
+                right now 😍😍😍
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Lady Jade Caoili Revera.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Lady Jade Caoili Revera</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--long">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/arlene.c.castro/posts/4632699276753043"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Highly recommended! I got to know her through her youtube channel. Her explanations about Maxicare’s
+                coverage under different cards is very clear, direct to the point as she knows exactly what my concerns
+                are. Very efficient and guided me carefully through the process of enrolment. Although she’s in Cebu and
+                I’m in the Metro, I never hesitated to trust her as my Maxicare Agent. The ecards of my family and I,
+                were emailed to me in a swift. I coudn’t ask for more ❤️ as I myself is in the health and life insurance
+                industry as well. This is why I didn’t hesitate to refer her to my friends as well, alam ko hindi ako
+                mapapahiya!
+                <br>
+                Thank you Anne 😊😍. Thank you for caring for your clients, ramdam ko 🥰🥰. Daghan salamat ❤️💯
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Arlene Crisostomo Castro.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Arlene Crisostomo Castro</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--long">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/gab.enri/posts/4854686101217534"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                This is a great program with great and dedicated agent. Less hassle, no phone cost, customer-focused and
+                knowledgeable agent about company’s products.
+                <br>
+                Maxi-care was well represented by Anne. All of my questions about the products were answered with
+                positivity and professionalism. She didn’t also pushed any products for me to buy, and understands the
+                budget and needs I have.
+                <br>
+                Anne’s efforts are focused to help answers customer questions and to share health care knowledge.
+                <br>
+                Hope Maxi-care would be getting inputs from agents like Anne. They know customers needs, budget and what
+                customers were looking for.
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Gab Enriquez.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Gab Enriquez</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--long">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/mikisarmiento4/posts/1831497843693597"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Met her from youtube but her service was outstanding! (as if we are already friends for a very long
+                time)
+                <br>
+                She discussed everything that we need to know. Handled my questions professionally and made me realize
+                the importance of having an HMO.
+                Thank you for your service! Now I feel more secure and ready!
+                Will definitely refer you to my friends, family and colleagues!
+                <br>
+                waiting for more videos from your annefluencer channel to learn more! Kudos! More lives to save! and
+                families to secure.
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Kim Sarmiento.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Kim Sarmiento</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider__slide slider__slide--long">
+          <div class="slider__slide__testimonial shadow">
+            <a target="_blank" href="https://www.facebook.com/glennaenriquez.estrada/posts/4875587562462351"
+              class="slider__slide__testimonial__link">
+              <blockquote class="slider__slide__testimonial__text bulk-text">
+                Definitely a five star for me!⭐️⭐️⭐️⭐️⭐️
+                Maxicare E-ready Advance (Titanium) was recommended to me by my sisters-in-law. They shared good things
+                about their experience and so I tried them.
+                <br>
+                My experience with my agent-Ms. Anne Nathalie was quite pleasant. She did an awesome job and help me get
+                exactly what I was looking for a health/medical insurance.
+                <br>
+                I highly recommend Ms. Anne Nathalie!
+                She knows what she's doing, super helpful and incredibly knowledgeable about the products she's
+                endorsing/selling.
+                She is quick , easy to deal with and quite friendly also.
+                <br>
+                Excellent Job Ms. Anne Nathalie.👏👏👏👏👏
+                Thank you for assisting me and my family.😘❤️
+                God bless.🙏
+              </blockquote>
+              <div class="slider__slide__testimonial__reviewer">
+                <img src="img/client - Glenna Enriquez Estrada.png" alt="Reviewer photo"
+                  class="slider__slide__testimonial__reviewer__img">
+                <p class="slider__slide__testimonial__reviewer__name">Glenna Enriquez Estrada</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="chevron">
+        <button class="chevron__btn chevron--left">
+          <img src="img/chevron-left.png" alt="" class="chevron__img">
+        </button>
+        <button class="chevron__btn chevron--right">
+          <img src="img/chevron-right.png" alt="" class="chevron__img">
+        </button>
+      </div>
+    </section>
+
+    <section class="main__section section section__reveal__healthcare" id="healthcare">
+      <h1 class="section__header">Maxicare is the leading HMO in the Country</h1>
+      <div class="cards">
+        <div class="cards__card shadow blur">
+          <a target="_blank" href="https://facebook.com/annefluencer/photos/a.116027015712702/598804734101592"
+            class="cards__card__link"><img src="img/plan - eready advance - lazy.jpg"
+              data-src="img/plan - eready advance.jpg" alt="" class="cards__card__img lazy-img"></a>
+          <div class="cards__card__desc">
+            <h3 class="cards__card__desc__header">MAXICARE 3-IN-1 HEALTH COVERAGE</h3>
+            <p class="cards__card__desc__description bulk-text">Save up to P50,000 from unexpected Hospital Bills to
+              Maxicare Affiliated Hostpitals, with P50,000 Group Life and Unlimited Consultations*. * in Maxicare
+              Clinics (PCCs) only.</p>
+            <a target="_blank" href="https://facebook.com/annefluencer/photos/a.116027015712702/598804734101592"
+              class="btn cards__card__btn">FIND OUT MORE</a>
+          </div>
+        </div>
+
+        <div class="cards__card shadow blur">
+          <a target="_blank" href="https://facebook.com/annefluencer/posts/704964006818997"
+            class="cards__card__link"><img src="img/plan - covid19 faq - lazy.jpg" data-src="img/plan - covid19 faq.jpg"
+              alt="" class="cards__card__img lazy-img"></a>
+          <div class="cards__card__desc">
+            <h3 class="cards__card__desc__header">MAXICARE COVERS COVID-19 CASES (FAQ)</h3>
+            <p class="cards__card__desc__description bulk-text">I received questions about Maxicare's take on COVID-19.
+              So yes, <a class="inline-link" href="https://facebook.com/annefluencer/posts/704964006818997">Let's
+                discuss</a> about the
+              coverage! 😊</p>
+            <a target="_blank" href="https://facebook.com/annefluencer/posts/704964006818997"
+              class="btn cards__card__btn">FIND OUT MORE</a>
+          </div>
+        </div>
+
+        <div class="cards__card shadow blur">
+          <a target="_blank" href="https://www.youtube.com/watch?v=ztc8_aTtEpc" class="cards__card__link"><img
+              src="img/plan - what to choose - lazy.jpg" data-src="img/plan - what to choose.jpg" alt=""
+              class="cards__card__img lazy-img"></a>
+          <div class="cards__card__desc">
+            <h3 class="cards__card__desc__header">LOOKING FOR HEALTHCARE PLANS?</h3>
+            <p class="cards__card__desc__description bulk-text">Here are the 5 STEPS you need to CHECK before GETTING a
+              Healthcare PLAN! 😊 Let's do this together! 😊</p>
+            <a target="_blank" href="https://www.youtube.com/watch?v=ztc8_aTtEpc" class="btn cards__card__btn">WATCH
+              VIDEO</a>
+          </div>
+        </div>
+
+        <div class="cards__card shadow blur">
+          <a target="_blank" href="https://youtu.be/7sjNQUoNvBU?t=300" class="cards__card__link"><img
+              src="img/plan - prima - lazy.jpg" data-src="img/plan - prima.jpg" alt=""
+              class="cards__card__img lazy-img"></a>
+          <div class="cards__card__desc">
+            <h3 class="cards__card__desc__header">SENIOR CARE FOR 60 YEARS AND UP</h3>
+            <p class="cards__card__desc__description bulk-text">Unlimited <span class="bold">Consultations</span>,
+              Unlimited <span class="bold">laboratory procedures</span> in Maxicare and MyHealth Clinics with Annual
+              <span class="bold">ER coverage</span> up to P20,000.
+            </p>
+            <a target="_blank" href="https://youtu.be/7sjNQUoNvBU?t=300" class="btn cards__card__btn">WATCH VIDEO</a>
+          </div>
+        </div>
+
+        <div class="cards__card shadow blur">
+          <iframe class="cards__card__video lazy-img" width="560" height="315"
+            src="img/plan - affordable health insurance.jpg" data-src="https://www.youtube.com/embed/8duONp_GOq4"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          <div class="cards__card__desc">
+            <h3 class="cards__card__desc__header">HEALTH INSURANCE FOR YOU AND YOUR FAMILY</h3>
+            <p class="cards__card__desc__description bulk-text">Even on a tight budget, you can cover your family ages
+              15 days to 65 years old for <span class="bold">P839</span> per member per YEAR!</p>
+            <a target="_blank" href="https://www.youtube.com/watch?v=8duONp_GOq4" class="btn cards__card__btn">WATCH
+              VIDEO</a>
+          </div>
+        </div>
+
+        <div class="cards__card shadow blur">
+          <a target="_blank" href="http://bit.ly/WorkWithAnne" class="cards__card__link"><img
+              src="img/plan - sme and business - lazy.jpg" data-src="img/plan - sme and business.jpg" alt=""
+              class="cards__card__img lazy-img"></a>
+          <div class="cards__card__desc">
+            <h3 class="cards__card__desc__header">MAXICARE SME PLANS FOR YOUR BUSINESS</h3>
+            <p class="cards__card__desc__description bulk-text">When your employees are healthy, your business is
+              healthy. <span class="bold">Complete healthcare coverage</span> to a wide Network of Hospitals and
+              Physicians nationwide!</p>
+            <a target="_blank" href="http://bit.ly/WorkWithAnne" class="btn cards__card__btn">REQUEST PROPOSAL</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main__section section about-me section__reveal" id="about-me">
+      <h1 class="section__header">About Anne Nathalie</h1>
+      <div class="about-me__content">
+        <img src="img/profile picture - circle.png" alt="" class="about-me__content__pic">
+        <div class="about-me__content__desc">
+          <h3 class="about-me__content__header">Certified Maxicare Agent</h3>
+          <p class="bulk-text">I am Anne Nathalie — a financial literacy advocate. I am also a Certified Maxicare Agent
+            authorized to sell <a class="inline-link" href="https://www.maxicare.com.ph/">Maxicare</a> Healthcare Plans
+            for You, Your
+            Family, or for your Businesses.</p>
+          <h3 class="about-me__content__header">My Belief</h3>
+          <p class="bulk-text">I believe that when we depart from this world, there are many things we leave behind,
+            like our legacy, our memories, tangible projects.</p>
+          <p class="bulk-text">In the financial aspect, we can leave EITHER of the 2 things: Debt or Wealth. They cannot
+            co-exist. Majority of Filipino families fall into debt because of high costs of healthcare.</p>
+          <p class="bulk-text">To avoid debt, it's either you pay off everything before you leave, or someone else
+            settle it on your behalf. The key to achieve this is through Personal Finance.</p>
+          <h3 class="about-me__content__header">Why Personal Finance?</h3>
+          <p class="bulk-text">Personal Finance will dictate where your money should go, instead of wondering where it
+            went.</p>
+          <p class="bulk-text">One of the foundations of Personal Finance is Health Insurance. Health insurance is a
+            form of financial service that pays for medical expenses in the midst of an illness or when health calls for
+            it.</p>
+          <p class="bulk-text">Experience Quality Healthcare at its finest for ALL ages, with Maxicare TODAY! :)</p>
+          <!-- <a href="#" class="btn about-me__content__btn">Connect with Anne</a> -->
+        </div>
+      </div>
+      <!-- <a href="#" class="btn about-me__btn">Connect with Anne</a>  -->
+    </section>
+
+    <section class="section lets-connect" id="lets-connect">
+      <h1 class="section__header">Let's Connect</h1>
+      <div>
+        <ul class="lets-connect__list">
+          <li class="lets-connect__list__item">
+            <a target="_blank" href="https://www.facebook.com/annefluencer"><img src="img/footer - facebook.png"
+                alt="Facebook" class="lets-connect__list__item__soc-med"></a>
+          </li>
+          <li class="lets-connect__list__item">
+            <a target="_blank" href="https://twitter.com/annefluencer"><img src="img/footer - twitter.png" alt="Twitter"
+                class="lets-connect__list__item__soc-med"></a>
+          </li>
+          <li class="lets-connect__list__item">
+            <a target="_blank" href="https://www.instagram.com/annefluencer/"><img src="img/footer-instagram.png"
+                alt="Instagram" class="lets-connect__list__item__soc-med"></a>
+          </li>
+          <li class="lets-connect__list__item">
+            <a target="_blank" href="https://www.linkedin.com/in/anne-nathalie-viquiera-347552100"><img
+                src="img/footer - linkedin.png" alt="LinkedIn" class="lets-connect__list__item__soc-med"></a>
+          </li>
+          <li class="lets-connect__list__item">
+            <a target="_blank" href="https://www.youtube.com/channel/UCXlp_34OyWAZ-SRSWILAv-w"><img
+                src="img/footer - youtube.png" alt="Youtube" class="lets-connect__list__item__soc-med"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="section footer__section">
+      <p class="footer__section__text bulk-text">Copyright © 2021 Anne Nathalie - Maxicare Agent - All Rights Reserved.
+      </p>
+      <p class="footer__section__text bulk-text">Icons made by <a class="inline-link--footer"
+          href="https://www.flaticon.com/authors/freepik">Freepik</a> and <a class="inline-link--footer"
+          href="https://www.flaticon.com/authors/google">Google</a> from www.flaticon.com</p>
+    </section>
+  </footer>
+</body>
+
+</html>

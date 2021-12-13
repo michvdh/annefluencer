@@ -1,0 +1,55 @@
+
+.about-me {
+  text-align: center;
+  &__content {
+    display: grid;
+    // justify-content: center;
+    // align-content: center;
+    // align-items: center;
+    text-align: center;
+
+    @include respond(tab-land) {
+      grid-template-columns: 0.5fr 1.5fr;
+      // grid-template-columns: 0.8fr 1.2fr;
+      column-gap: 5rem;
+      text-align: left;
+    }
+
+    &__pic {
+      margin: 0 auto;
+      display: inline-block;
+      width: 12rem;
+
+      @include respond(phone-l) {
+        width: 13rem;
+      }
+
+      @include respond(tab-land-m) {
+        width: 15rem;
+      }
+
+      @include respond(tab-land) {
+        width: 25rem;
+      }
+    }
+
+    &__header {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__btn {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+  }
+
+  // &__btn {
+  //   display: inline-block;
+  //   // margin: 0 auto;
+  //   margin-top: 2.5rem;
+  //   // text-align: center;
+  // }
+ 
+}

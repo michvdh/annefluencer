@@ -1,0 +1,23 @@
+
+
+.lets-connect {
+  margin-bottom: 5rem;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      margin: 0 1.5rem;
+
+      &__soc-med {
+        width: 3rem;
+
+        @include respond(phone-m) {
+          width: 4rem;
+        }
+      }
+    }
+  }
+}

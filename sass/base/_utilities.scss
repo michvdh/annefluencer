@@ -1,0 +1,15 @@
+
+.shadow {
+  box-shadow: 0 0.2rem 0.2rem $background-gray-light;
+}
+
+.blur {
+  backdrop-filter: blur(4rem);
+}
+
+.lazy-img {
+  filter: blur(2rem);
+}
+// .header-height-insert {
+//   margin-top: 6.5rem; // height of header + margin of hero
+// }

@@ -1,0 +1,159 @@
+
+.hero {
+  position: relative;
+  display: grid;
+
+  @include respond(tab-land-m) {
+    grid-template-columns: 0.85fr 1.15fr;
+    column-gap: 5rem;
+  }
+
+  @include respond(desktop) {
+    grid-template-columns: 0.85fr 1.15fr;
+    column-gap: 8.5rem;
+  }
+
+  &__text {
+    text-align: center;
+
+    @include respond(tab-land-m) {
+      text-align: left;
+    }
+
+    &__header {
+      &--tertiary {
+        margin-top: 1rem;
+
+        @include respond(desktop) {
+          margin-top: 2rem;
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__media {
+    &__container {
+      margin: 0 auto;
+      border-radius: 1.5rem;
+      // max-width: 56rem;
+      // max-height: 31.5rem;
+      width: 90%;
+      // height: 50%;
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+
+      @include respond(tab-land-m) {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    @include respond(tab-land-m) {
+      display: inline-block;
+      // align-content: right;
+      justify-content: right;
+    }
+
+    &--video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__design {
+    position: absolute;
+    z-index: -10;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    filter: blur(2.5rem);
+
+    &--1 {
+      width: 15rem;
+      height: 18rem;
+      background-color: $background-blue-dark;
+      box-shadow: inset 0px 0px 40px 40px $background-blue-dark;
+      top: 40%;
+      right: 80%;
+
+      @include respond(tab-port) {
+        top: 50%;
+        right: 90%;
+      }
+
+      @include respond(tab-land-m) {
+        right: 43%;
+        top: 5%;
+      }
+    }
+
+    &--2 {
+      width: 25rem;
+      height: 28rem;
+      background-color: $background-yellow;
+      right: -50%;
+      bottom: 10%;
+
+      @include respond(phone-l) {
+        right: -20%;
+        bottom: -3%;
+      }
+
+      @include respond(tab-land-m) {
+        bottom: -3%;
+        right: -15%;
+      }
+
+      @include respond(tab-land-l) {
+        bottom: -3%;
+        right: -8%;
+      }
+    }
+
+    &--3 {
+      width: 8rem;
+      height: 9rem;
+      background-color: $background-red;
+      right: 90%;
+
+      // @include respond(phone-l) {
+      //   right: 35%;
+      //   bottom: 6%;
+      // }
+
+      @include respond(tab-port) {
+        right: 0%;
+        bottom: 55%;
+      }
+
+      @include respond(tab-port-l) {
+        right: -3%;
+        bottom: 55%;
+      }
+
+      @include respond(tab-land-m) {
+        bottom: -5%;
+        right: 18%;
+      }
+    }
+  }
+}
+
+// related to sticky nav. See header.scss for the other part
+.sticky .hero {
+  margin-top: 9.5rem; // height of header (5rem) + margin-top of hero (4.5rem). This fixes the bump when scrolling down
+
+  @include respond(desktop) {
+    margin-top: 12rem; // 5rem header height + 7rem margin top of hero
+  }
+}

@@ -1,0 +1,185 @@
+
+.header {
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  background-color: $background-white-light-opaque;
+  transition: all 0.3s;
+  
+  &__section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s;
+    
+
+    @include respond(tab-land) {
+      position: relative;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+    margin-top: 0.832rem;
+  }
+
+  &__nav {
+    position: fixed;
+    top: 8rem;
+    margin: 0 auto;
+    width: 100%;
+    transform: translateX(50%);
+    right: 50%;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab-land) {
+      display: flex;
+      background: none;
+      position: initial;
+      transform: translateX(0);
+      right: 0;
+      margin: 0;
+      width: initial;
+    }
+    
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 4.8rem;
+      text-align: center;
+      align-items: center;
+
+      @include respond(tab-land) {
+        flex-direction: row;
+      }
+
+      &__item {
+        list-style: none;
+        margin: 0rem;
+        transition: all .5s;
+        
+        &:hover {
+          transform: translateX(0.8rem);
+
+          @include respond(tab-land) {
+            transform: none;
+          }
+        }
+
+        @include respond(tab-land) {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__link--reg {
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      color: $background-blue-dark;
+    }
+  }
+
+}
+
+
+.nav--open {
+  height: 40rem;
+}
+ 
+
+.mobile-nav {
+  position: relative;
+  border-radius: 15rem;
+  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 4rem;
+  height: 4rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0); 
+  outline: none;
+
+
+  &__icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2px;
+      background-color: $background-gray-dark;
+      display: inline-block;
+      transition: all .2s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -0.5rem;
+    }
+
+    &::after {
+      top: 0.5rem;
+    }
+  }
+
+  &:hover &__icon {
+    background-color: $font-primary-dark;
+  }
+
+  &:hover &__icon::before {
+    top: -0.65rem;
+    background-color: $font-primary-dark;
+  }
+
+  &:hover &__icon::after {
+    top: 0.65rem;
+    background-color: $font-primary-dark;
+  }
+
+  @include respond(tab-land) {
+    display: none;
+  }
+}
+
+
+.checkbox {
+  display: none;
+}
+
+
+.checkbox:checked + .mobile-nav .mobile-nav__icon {
+  background: transparent;
+}
+
+.checkbox:checked + .mobile-nav .mobile-nav__icon::before {
+  transform: rotate(135deg);
+  top: 0;
+}
+
+.checkbox:checked + .mobile-nav .mobile-nav__icon::after {
+  transform: rotate(-135deg);
+  top: 0;
+}
+
+
+

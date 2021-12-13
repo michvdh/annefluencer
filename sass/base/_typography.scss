@@ -1,0 +1,207 @@
+/* ---- BASE ---- */
+
+html {
+  font-family: 'Manrope', sans-serif;
+  //font-weight, color, line-height
+}
+
+.section {
+  &__header {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
+.bulk-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inline-link {
+  color: $font-secondary-dark;
+  font-weight: 700;
+
+  &--footer {
+    color: $background-gray-dark;
+    font-weight: 600;
+  }
+}
+
+/* ---- Header ---- */
+
+.header {
+  &__link {
+    font-size: 2rem;
+    color: $font-primary-dark;
+    font-weight: 700;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+
+/* ---- Hero ---- */
+
+.hero {
+  // 
+  &__text {
+    
+    &__header {
+      &--main {
+        font-size: 3rem;
+        font-weight: 700;
+
+        @include respond(tab-land) {
+          // font-size: 3vw;
+        }
+      }
+
+      &--secondary {
+        font-size: 2.3rem;
+        color: $font-secondary-dark;
+
+        @include respond(tab-land) {
+          // font-size: 2.3vw;
+        }
+      }
+
+      &--tertiary {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: $font-secondary-gray;
+
+        @include respond(tab-land) {
+          // font-size: 1.5vw;
+        }
+
+        @include respond(desktop) {
+          // line-height: 2.8rem;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    // font-weight: 700;
+
+    @include respond(desktop) {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+/* ---- Reviews ---- */
+
+.slider {
+  &__slide {
+    &__testimonial {
+
+      &__link {
+        color: $font-primary-dark;
+      }
+
+      &__text {
+        font-size: 1.2rem;
+
+        // @include respond(phone-m) {
+        //   font-size: 1.2rem;
+        // }
+
+        @include respond(phone-l) {
+          font-size: 1.3rem;
+        }
+
+        @include respond(tab-port-s) {
+          font-size: 1.35rem;
+        }
+
+        @include respond(tab-port) {
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+
+        @include respond(tab-land-s) {
+          // font-size: 1.5rem;
+          // line-height: 2rem;
+        }
+
+        @include respond(tab-land) {
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
+      }
+
+      &__reviewer {
+        &__name {
+          font-size: 1.2rem;
+          font-weight: 700;
+
+          @include respond(phone-l) {
+            font-size: 1.3rem;
+          }
+  
+          @include respond(tab-port-s) {
+            font-size: 1.35rem;
+          }
+
+          @include respond(tab-port) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* ---- Plans ---- */
+
+.cards {
+  &__card {
+    &__desc {
+      &__header {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+
+
+/* ---- About Me ---- */
+
+.about-me {
+  &__content {
+    &__header {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+/* ---- Footer ---- */
+
+.footer {
+
+  &__section {
+    text-align: center;
+    
+    &__text {
+      color: $background-gray-dark;
+      font-size: 1.3rem;
+    }
+  }
+}
