@@ -2,3 +2,11 @@
 // html {
 //   scroll-behavior: smooth;
 // }
+
+.slider {
+  &__slide {
+    // transition: opacity 0.s;
+    transition: transform 0.8s;
+    
+  }
+}
