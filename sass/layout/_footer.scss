@@ -1,6 +1,29 @@
 
+
+.lets-connect {
+  margin-bottom: 2rem;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      margin: 0 1.5rem;
+
+      &__soc-med {
+        width: 3rem;
+
+        @include respond(phone-m) {
+          width: 4rem;
+        }
+      }
+    }
+  }
+}
+
 .footer {
-  height: 8.5em;
+  height: 23.5em;
   display: flex;
   // justify-content: center;
   align-items: center;
@@ -8,11 +31,15 @@
   &__section {
     text-align: center;
 
+    &__header {
+      margin-top: 0;
+    }
+
     &__text {
     }
   }
 
   @include respond(phone-l) {
-    height: 6.5rem;
+    height: 23.5rem;
   }
 }

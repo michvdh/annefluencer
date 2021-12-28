@@ -25,7 +25,7 @@ html {
   overflow-x: hidden; }
 
 body {
-  background-color: #f1f4f7;
+  background-color: #f9fbfd;
   overflow: hidden; }
 
 .header, .footer {
@@ -53,7 +53,6 @@ body {
 .main__section {
   padding-top: 4.5rem;
   padding-bottom: 7rem;
-  margin-top: 4.5rem;
   margin-bottom: 1rem; }
   @media only screen and (min-width: 1024px) {
     .main__section {
@@ -310,7 +309,7 @@ a {
       height: 2px;
       background-color: #848282;
       display: inline-block;
-      transition: all .2s; }
+      transition: transform .3s; }
     .mobile-nav__icon::before, .mobile-nav__icon::after {
       content: "";
       position: absolute;
@@ -473,7 +472,6 @@ a {
       color: #f0d250; }
 
 .carousel {
-  overflow: hidden;
   position: relative;
   margin-top: 3rem;
   margin-bottom: 3rem; }
@@ -677,18 +675,8 @@ a {
       margin-top: 2.5rem;
       text-align: center; }
 
-.footer {
-  height: 8.5em;
-  display: flex;
-  align-items: center; }
-  .footer__section {
-    text-align: center; }
-  @media only screen and (min-width: 480px) {
-    .footer {
-      height: 6.5rem; } }
-
 .lets-connect {
-  margin-bottom: 5rem; }
+  margin-bottom: 2rem; }
   .lets-connect__list {
     list-style: none;
     display: flex;
@@ -700,6 +688,18 @@ a {
         @media only screen and (min-width: 412px) {
           .lets-connect__list__item__soc-med {
             width: 4rem; } }
+
+.footer {
+  height: 23.5em;
+  display: flex;
+  align-items: center; }
+  .footer__section {
+    text-align: center; }
+    .footer__section__header {
+      margin-top: 0; }
+  @media only screen and (min-width: 480px) {
+    .footer {
+      height: 23.5rem; } }
 
 /*
 @if $breakpoint == phone-s {

@@ -327,7 +327,7 @@ const carouselFunction = function () {
           s.style.transform = `translateX(${slidesArray[i]}px)`;
         });
       }
-    }, 2000);
+    }, 20000);
 
     slider.addEventListener('mouseover', function () {
       clearInterval(slideTime);
