@@ -149,11 +149,13 @@
   &:hover &__icon::before {
     top: -0.65rem;
     background-color: $font-primary-dark;
+    transition: all .2s;
   }
 
   &:hover &__icon::after {
     top: 0.65rem;
     background-color: $font-primary-dark;
+    transition: all .2s;
   }
 
   @include respond(tab-land) {
