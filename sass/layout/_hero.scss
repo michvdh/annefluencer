@@ -3,7 +3,7 @@
   position: relative;
   display: grid;
 
-  @include respond(tab-land-m) {
+  @include respond(tab-land-s) {
     grid-template-columns: 0.85fr 1.15fr;
     column-gap: 5rem;
   }
@@ -14,9 +14,10 @@
   }
 
   &__text {
+    z-index: 2;
     text-align: center;
 
-    @include respond(tab-land-m) {
+    @include respond(tab-land-s) {
       text-align: left;
     }
 
@@ -38,6 +39,7 @@
   }
 
   &__media {
+    z-index: 2;
     &__container {
       margin: 0 auto;
       border-radius: 1.5rem;
@@ -49,7 +51,11 @@
       overflow: hidden;
       padding-top: 56.25%;
 
-      @include respond(tab-land-m) {
+      // @include respond(tab-port-l) {
+      //   width: 9%;
+      // }
+
+      @include respond(tab-land-s) {
         margin: 0;
         width: 100%;
       }
@@ -74,7 +80,7 @@
 
   &__design {
     position: absolute;
-    z-index: -10;
+    z-index: -1;
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     filter: blur(2.5rem);
 

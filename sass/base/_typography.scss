@@ -30,7 +30,8 @@ a {
   font-weight: 700;
 
   &--footer {
-    color: $background-gray-dark;
+    // color: $background-gray-dark;
+    color: $background-white-light;
     font-weight: 600;
   }
 }
@@ -198,9 +199,14 @@ a {
 
   &__section {
     text-align: center;
+
+    &__header {
+      color: $background-white-light;
+    }
     
     &__text {
-      color: $background-gray-dark;
+      // color: $background-gray-dark;
+      color: $background-white-light;
       font-size: 1.3rem;
     }
   }

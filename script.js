@@ -67,7 +67,7 @@ header.addEventListener('click', function (e) {
 });
 
 
-// /* --- HEADER - Sticky Navigation --- */
+/* --- HEADER - Sticky Navigation --- */
 // const sectionHeroEl = document.querySelector('.hero');
 
 // const obs = new IntersectionObserver(function (entries) {

@@ -7,25 +7,35 @@ $background-white-light: #ffffff;
 // $background-white-light-opaque: #ffffffef;
 $background-white-light-opaque: #ffffffb1;
 $background-white-light-opaque-less: #fffffff5;
-$background-white-gray: #f9fbfd;
+// $background-white-gray: #f6f8fa;
+$background-white-gray: #f3f7f8;
 
 $background-gray-dark: #848282;
 $background-gray-light: #acacac;
 
 $background-blue-dark: #00beff;
 $background-blue-light: #bce5f7;
-$background-blue-light-transparent: #bce5f7c6;
+$background-blue-mid: rgba(246, 253, 255, 0.673);
+$background-blue-light-transparent: #c5e8f7c6;
 $background-yellow: #fff568;
 $background-red: #ec008c;
-$background-gold: #f0d250;
+$background-gold: #f8dc5e;
 $background-green-light: #c4df9b;
 $background-green-dark: #82ca9c;
 $background-orange: #f68e56;
 $background-pink: #f49ac1;
 $background-aqua: #D3FDFE;
+// $background-peach: rgba(253, 242, 231, 0.959);
+// $background-peach: #f8f0e3;
+$background-peach: #F6F6F6;
+$background-navy-blue: #294B67;
+$background-dark: rgb(58, 62, 67);
 
 $shadow-gray: 0 0.2rem 0.2rem $background-gray-light;
 $shadow-aqua: 0 0.2rem 0.2rem $background-aqua;
+
+$test-green: #F7F5F2;
+
 
 
 // Hexagon Clip Path
