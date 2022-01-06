@@ -212,6 +212,7 @@ a {
       line-height: 2.5rem; } }
 
 .slider__slide__testimonial__reviewer__name {
+  color: #1c3244;
   font-size: 1.2rem;
   font-weight: 700; }
   @media only screen and (min-width: 480px) {
