@@ -35,7 +35,7 @@ body {
   background-color: #ffffff; }
 
 .footer {
-  background-color: #294B67; }
+  background-color: #1c3244; }
 
 .section {
   margin: 0 auto;
@@ -132,18 +132,22 @@ body {
 
 /* ---- BASE ---- */
 html {
-  font-family: 'Manrope', sans-serif; }
+  font-family: 'Public Sans', sans-serif; }
 
 .section__header {
-  font-size: 3rem;
-  font-weight: 600; }
+  font-family: 'Vollkorn', serif;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #1c3244; }
 
 .bulk-text {
   font-size: 1.5rem;
-  line-height: 2rem; }
+  line-height: 2rem;
+  font-weight: 300; }
 
 .btn {
-  font-size: 1.5rem; }
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.7rem; }
 
 a {
   text-decoration: none; }
@@ -158,29 +162,33 @@ a {
 /* ---- Header ---- */
 .header__link {
   font-size: 2rem;
-  color: #212121;
+  color: #1c3244;
   font-weight: 700; }
   @media only screen and (min-width: 1024px) {
     .header__link {
       font-size: 1.5rem; } }
 
 /* ---- Hero ---- */
-.hero__text__header--main {
-  font-size: 3rem;
-  font-weight: 700; }
+.hero__text {
+  font-family: 'Vollkorn', serif;
+  color: #1c3244; }
+  .hero__text__header--main {
+    font-size: 4rem;
+    font-weight: 700; }
+  .hero__text__header--secondary {
+    font-size: 3rem;
+    color: #144f78; }
+  .hero__text__header--tertiary {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #565454; }
 
-.hero__text__header--secondary {
-  font-size: 2.3rem;
-  color: #144f78; }
-
-.hero__text__header--tertiary {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #565454; }
-
-@media only screen and (min-width: 1360px) {
-  .hero__btn {
-    font-size: 2rem; } }
+.hero__btn {
+  font-weight: 500; }
+  @media only screen and (min-width: 1360px) {
+    .hero__btn {
+      font-size: 2rem; } }
 
 /* ---- Reviews ---- */
 .slider__slide__testimonial__link {
@@ -218,12 +226,17 @@ a {
 
 /* ---- Plans ---- */
 .cards__card__desc__header {
-  font-size: 2rem;
+  font-family: 'Vollkorn', serif;
+  color: #1c3244;
+  font-size: 2.2rem;
   font-weight: 700; }
 
 /* ---- About Me ---- */
 .about-me__content__header {
-  font-size: 2rem; }
+  font-family: 'Vollkorn', serif;
+  color: #1c3244;
+  font-size: 2.2rem;
+  font-weight: 700; }
 
 /* ---- Footer ---- */
 .footer__section {

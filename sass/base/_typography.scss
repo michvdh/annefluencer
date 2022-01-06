@@ -1,24 +1,30 @@
 /* ---- BASE ---- */
 
 html {
-  font-family: 'Manrope', sans-serif;
+  // font-family: 'Manrope', sans-serif;
   //font-weight, color, line-height
+  font-family: 'Public Sans', sans-serif;
 }
 
 .section {
   &__header {
-    font-size: 3rem;
+    font-family: 'Vollkorn', serif;
+    // font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
+    color: $background-navy-blue;
   }
 }
 
 .bulk-text {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 300;
 }
 
 .btn {
-  font-size: 1.5rem;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.7rem;
 }
 
 a {
@@ -39,9 +45,15 @@ a {
 /* ---- Header ---- */
 
 .header {
+  // color: $background-navy-blue;
   &__link {
+    // font-size: 2rem;
+    // color: $font-primary-dark;
+    // font-weight: 700;
+
     font-size: 2rem;
-    color: $font-primary-dark;
+    // color: $font-primary-dark;
+    color: $background-navy-blue;
     font-weight: 700;
 
     @include respond(tab-land) {
@@ -55,47 +67,33 @@ a {
 /* ---- Hero ---- */
 
 .hero {
-  // 
   &__text {
-    
+    font-family: 'Vollkorn', serif;
+    color: $background-navy-blue;
     &__header {
       &--main {
-        font-size: 3rem;
+        // font-size: 3rem;
+        font-size: 4rem;
         font-weight: 700;
-
-        @include respond(tab-land) {
-          // font-size: 3vw;
-        }
       }
 
       &--secondary {
-        font-size: 2.3rem;
+        // font-size: 2.3rem;
+        font-size: 3rem;
         color: $font-secondary-dark;
-
-        @include respond(tab-land) {
-          // font-size: 2.3vw;
-        }
       }
 
       &--tertiary {
+        font-family: 'Public Sans', sans-serif;
         font-size: 1.8rem;
         font-weight: 400;
         color: $font-secondary-gray;
-
-        @include respond(tab-land) {
-          // font-size: 1.5vw;
-        }
-
-        @include respond(desktop) {
-          // line-height: 2.8rem;
-        }
       }
     }
   }
 
   &__btn {
-    // font-weight: 700;
-
+    font-weight: 500;
     @include respond(desktop) {
       font-size: 2rem;
     }
@@ -173,7 +171,9 @@ a {
   &__card {
     &__desc {
       &__header {
-        font-size: 2rem;
+        font-family: 'Vollkorn', serif;
+        color: $background-navy-blue;
+        font-size: 2.2rem;
         font-weight: 700;
       }
     }
@@ -187,7 +187,11 @@ a {
 .about-me {
   &__content {
     &__header {
-      font-size: 2rem;
+      font-family: 'Vollkorn', serif;
+      color: $background-navy-blue;
+      // font-size: 2rem;
+      font-size: 2.2rem;
+      font-weight: 700;
     }
   }
 }
