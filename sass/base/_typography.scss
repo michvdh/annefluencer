@@ -8,7 +8,7 @@ html {
 
 .section {
   &__header {
-    font-family: 'Vollkorn', serif;
+    // font-family: 'Vollkorn', serif;
     // font-size: 3rem;
     font-size: 4rem;
     font-weight: 600;
@@ -68,7 +68,7 @@ a {
 
 .hero {
   &__text {
-    font-family: 'Vollkorn', serif;
+    // font-family: 'Vollkorn', serif;
     color: $background-navy-blue;
     &__header {
       &--main {
@@ -176,7 +176,7 @@ a {
   &__card {
     &__desc {
       &__header {
-        font-family: 'Vollkorn', serif;
+        // font-family: 'Vollkorn', serif;
         color: $background-navy-blue;
         font-size: 2.2rem;
         font-weight: 700;
@@ -192,7 +192,7 @@ a {
 .about-me {
   &__content {
     &__header {
-      font-family: 'Vollkorn', serif;
+      // font-family: 'Vollkorn', serif;
       color: $background-navy-blue;
       // font-size: 2rem;
       font-size: 2.2rem;
