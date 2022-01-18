@@ -1,5 +1,6 @@
 
 .about-me {
+  position: relative;
   text-align: center;
   &__content {
     display: grid;
@@ -16,6 +17,7 @@
     }
 
     &__pic {
+      z-index: 5;
       margin: 0 auto;
       display: inline-block;
       width: 12rem;

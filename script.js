@@ -1,5 +1,14 @@
 'use strict';
 
+/* --- Viewport detection size --- */
+let viewportWidth = document.documentElement.clientWidth;
+
+window.addEventListener('resize', function () {
+  carouselFunction();
+});
+
+
+
 /* --- HEADER - Hamburger Navigation --- */
 const header = document.querySelector('.header');
 const hamburger = document.querySelector('.mobile-nav');
@@ -15,10 +24,12 @@ hamburger.addEventListener('click', function () {
   if (checkbox.checked == false) {
     checkbox.checked = true;
     header.classList.add('nav--open');
+    header.classList.add('shadow');
     // header.style.height = '33rem';
   } else {
     checkbox.checked = false;
     header.classList.remove('nav--open');
+    header.classList.remove('shadow');
     // header.style.height = '5rem';
   }
 
@@ -68,30 +79,41 @@ header.addEventListener('click', function (e) {
 
 
 /* --- HEADER - Sticky Navigation --- */
-// const sectionHeroEl = document.querySelector('.hero');
+const sectionHeroEl = document.querySelector('.hero');
+let IOthreshold = 0;
 
-// const obs = new IntersectionObserver(function (entries) {
-//   const ent = entries[0];
-//   console.log(ent);
+// 679 - 799  .. 0.83
 
-//   if (ent.isIntersecting === false) {
-//     document.body.classList.add('sticky');
-//     // sectionHeroEl.classList.add('header-height-insert');
-//   }
+if(viewportWidth >= 679 && viewportWidth <= 799) {
+  IOthreshold = 0.83;
+} else {
+  IOthreshold = 0.9;
+}
 
-//   if (ent.isIntersecting) {
-//     document.body.classList.remove('sticky');
-//   }
+const obs = new IntersectionObserver(function (entries) {
+  const ent = entries[0];
+  console.log(ent);
 
-// },
-//   {
-//     root: null, // null pertains to the viewport
-//     threshold: 0, // means an event will be fired as soon as 0% of hero is inside the viewport .. or basically, if hero section is no longer visible from the viewport
-//     rootMargin: '-80px'
-//   }
-// );
+  if (ent.isIntersecting === false) {
+    // document.body.classList.add('sticky');
+    // sectionHeroEl.classList.add('header-height-insert');
+    header.classList.add('shadow');
+  }
 
-// obs.observe(sectionHeroEl);
+  if (ent.isIntersecting) {
+    // document.body.classList.remove('sticky');
+    header.classList.remove('shadow');
+  }
+
+},
+  {
+    root: null, // null pertains to the viewport
+    threshold: IOthreshold, // means an event will be fired as soon as 40% of hero is inside the viewport .. or basically, if hero section is no longer visible from the viewport. 
+    rootMargin: '0px' // function will take effect 200px before the threshold is actually reached.
+  }
+);
+
+obs.observe(sectionHeroEl);
 
 
 
@@ -165,14 +187,6 @@ const lazyObserver = new IntersectionObserver(loadElement, {
 });
 
 lazyLoadElements.forEach(el => lazyObserver.observe(el));
-
-
-/* --- Viewport detection size --- */
-let viewportWidth;
-
-window.addEventListener('resize', function () {
-  carouselFunction();
-});
 
 
 

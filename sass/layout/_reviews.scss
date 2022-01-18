@@ -2,6 +2,7 @@
   width: 95%; // override the section width defined in base.scss
   padding-left: 0;
   padding-right: 0;
+  position: relative;
 
   // convert width back to 90% at tab-land-port
 
@@ -22,6 +23,46 @@
     }
   }
 }
+
+.quote__img {
+  display: none;
+
+  @include respond(tab-land-m) {
+    display: initial;
+    position: absolute;
+    width: 5rem;
+
+    @include respond(tab-land) {
+      width: 8rem;
+    }
+
+    &--left {
+      top: 30%;
+      left: 3%;
+
+      @include respond(tab-land) {
+        top: 25%;
+      }
+
+      @include respond(desktop-s) {
+        left: 7%;
+      }
+    }
+
+    &--right {
+      top: 75%;
+      right: 3%;
+
+      @include respond(desktop-s) {
+        top: 80%;
+        right: 7%;
+      }
+    }
+  }
+  
+}
+
+
 
 .carousel {
   
@@ -150,66 +191,3 @@
   // }
 }
 
-.chevron {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-
-  @include respond(tab-land) {
-    gap: 2.5rem;
-  }
-
-  &__img {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-
-  &__btn {
-    width: 3rem;
-    height: 3rem;
-    // padding: 0.7rem;
-    color: $background-white-light;
-    display: flex;
-    background: $background-blue-dark;
-    border-radius: 24rem;
-    border: 0.2rem solid $background-blue-dark;
-    // position: relative;
-    z-index: 1;
-    transition: all 0.1s ease-out;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
-    -webkit-focus-ring-color: rgba(255, 255, 255, 0); 
-
-    // &:before {
-    //   background: linear-gradient(139deg, rgba(41, 241, 253, 0.902) 0%, rgba(41,170,208,0.9) 20%, rgba(155,61,235,0.9) 84%);
-    //   content: "";
-    //   width: 100%;
-    //   height: 100%;
-    //   top: 0;
-    //   left: 0;
-    //   position: absolute;
-    //   z-index: -1;
-    //   opacity: 0;
-    //   transition: opacity 0.3s ease-out;
-    //   border-radius: 30rem;
-    //   box-shadow: $shadow-gray;
-    // }
-
-    &:hover {
-      // &:before {
-      //   opacity: 1;
-      // }
-      color: $background-blue-dark;
-      background: $background-white-light;
-    }
-
-    @include respond(tab-land) {
-      width: 3.5rem;
-      height: 3.5rem;
-    }
-    
-  }
-}

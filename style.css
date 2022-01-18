@@ -25,7 +25,7 @@ html {
   overflow-x: hidden; }
 
 body {
-  background-color: #f3f7f8;
+  background-color: #ebf5fe;
   overflow: hidden; }
 
 .header, .footer {
@@ -83,7 +83,7 @@ body {
         padding-top: 10rem;
         padding-bottom: 5rem; } }
   .sec--2 {
-    background: linear-gradient(0deg, #ffffff 46%, #f3f7f8 46%);
+    background: linear-gradient(0deg, #ffffff 46%, #ebf5fe 46%);
     position: relative;
     z-index: 5; }
     .sec--2::before {
@@ -95,13 +95,13 @@ body {
       z-index: 0;
       width: 100%;
       height: 60%;
-      background-color: #f3f7f8;
+      background-color: #ebf5fe;
       clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 88%); }
       @media only screen and (min-width: 926px) {
         .sec--2::before {
           top: 42%; } }
   .sec--3 {
-    background: linear-gradient(0deg, #f3f7f8 46%, #ffffff 46%);
+    background: linear-gradient(0deg, #ebf5fe 46%, #ffffff 46%);
     position: relative;
     z-index: 4; }
     .sec--3::before {
@@ -114,12 +114,12 @@ body {
       width: 100%;
       height: 50%;
       background-color: #ffffff;
-      clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%); }
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
       @media only screen and (min-width: 926px) {
         .sec--3::before {
           top: 42%; } }
   .sec--4 {
-    background-color: #f3f7f8; }
+    background-color: #ebf5fe; }
 
 .main__section {
   box-sizing: border-box;
@@ -336,6 +336,10 @@ a {
   z-index: 999;
   background-color: #ffffffb1;
   transition: all 0.3s; }
+  .header__link {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    outline: none; }
   .header__section {
     position: relative;
     display: flex;
@@ -346,7 +350,10 @@ a {
         position: relative; } }
   .header__logo {
     width: 15rem;
-    margin-top: 0.832rem; }
+    margin-top: 0.832rem;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    outline: none; }
   .header__nav {
     position: fixed;
     top: 8rem;
@@ -562,7 +569,8 @@ a {
 .reviews {
   width: 95%;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  position: relative; }
   @media only screen and (min-width: 1280px) {
     .reviews {
       padding-left: 3rem;
@@ -575,6 +583,35 @@ a {
       width: 5rem;
       height: 5rem;
       color: #f8dc5e; }
+
+.quote__img {
+  display: none; }
+  @media only screen and (min-width: 926px) {
+    .quote__img {
+      display: initial;
+      position: absolute;
+      width: 5rem; } }
+  @media only screen and (min-width: 926px) and (min-width: 1024px) {
+    .quote__img {
+      width: 8rem; } }
+  @media only screen and (min-width: 926px) {
+      .quote__img--left {
+        top: 30%;
+        left: 3%; } }
+    @media only screen and (min-width: 926px) and (min-width: 1024px) {
+      .quote__img--left {
+        top: 25%; } }
+    @media only screen and (min-width: 926px) and (min-width: 1280px) {
+      .quote__img--left {
+        left: 7%; } }
+  @media only screen and (min-width: 926px) {
+      .quote__img--right {
+        top: 75%;
+        right: 3%; } }
+    @media only screen and (min-width: 926px) and (min-width: 1280px) {
+      .quote__img--right {
+        top: 80%;
+        right: 7%; } }
 
 .carousel {
   overflow: hidden;
@@ -659,39 +696,6 @@ a {
               height: 8rem;
               margin-right: 2.5rem; } }
 
-.chevron {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem; }
-  @media only screen and (min-width: 1024px) {
-    .chevron {
-      gap: 2.5rem; } }
-  .chevron__img {
-    width: 1.5rem;
-    height: 1.5rem; }
-  .chevron__btn {
-    width: 3rem;
-    height: 3rem;
-    color: #ffffff;
-    display: flex;
-    background: #00beff;
-    border-radius: 24rem;
-    border: 0.2rem solid #00beff;
-    z-index: 1;
-    transition: all 0.1s ease-out;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    -webkit-focus-ring-color: rgba(255, 255, 255, 0); }
-    .chevron__btn:hover {
-      color: #00beff;
-      background: #ffffff; }
-    @media only screen and (min-width: 1024px) {
-      .chevron__btn {
-        width: 3.5rem;
-        height: 3.5rem; } }
-
 .cards {
   display: grid;
   row-gap: 5rem;
@@ -741,6 +745,7 @@ a {
         margin-bottom: 2rem; }
 
 .about-me {
+  position: relative;
   text-align: center; }
   .about-me__content {
     display: grid;
@@ -751,6 +756,7 @@ a {
         column-gap: 5rem;
         text-align: left; } }
     .about-me__content__pic {
+      z-index: 5;
       margin: 0 auto;
       display: inline-block;
       width: 12rem; }
