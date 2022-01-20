@@ -651,7 +651,8 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto; }
+      margin: 0 auto;
+      transition: transform .3s; }
       @media only screen and (min-width: 768px) {
         .slider__slide__testimonial {
           width: 90%; } }
@@ -695,6 +696,8 @@ a {
               width: 8rem;
               height: 8rem;
               margin-right: 2.5rem; } }
+      .slider__slide__testimonial:hover {
+        transform: scale(1.01); }
 
 .cards {
   display: grid;
@@ -731,7 +734,8 @@ a {
     background-color: #ffffff;
     border-radius: 1.5rem;
     overflow: hidden;
-    margin: 0 auto; }
+    margin: 0 auto;
+    transition: transform .3s; }
     .cards__card__img {
       width: 100%; }
     .cards__card__video {
@@ -743,6 +747,8 @@ a {
         margin-bottom: 1rem; }
       .cards__card__desc__description {
         margin-bottom: 2rem; }
+    .cards__card:hover {
+      transform: scale(1.03); }
 
 .about-me {
   position: relative;

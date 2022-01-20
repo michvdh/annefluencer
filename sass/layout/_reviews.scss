@@ -118,6 +118,7 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto;
+      transition: transform .3s;
 
       @include respond(tab-port-l) {
         width: 90%;
@@ -184,10 +185,13 @@
           // display: inline-block;
         }
       }
+
+      &:hover {
+        transform: scale(1.01)
+      }
     }
+
+    
   }
-  // &__chevron-side {
-  //   display: none;
-  // }
 }
 
