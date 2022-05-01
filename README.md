@@ -1,5 +1,4 @@
-Site is hosted at Netlify.
-annefluencer.netlify.app/
+Site is hosted at Netlify: annefluencer.netlify.app/
 
 Currently having problems since Smart and PLDT ISPs are blocking netlify.app domains. Still coordinating with Tech Support from ISPs.
 
