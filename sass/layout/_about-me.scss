@@ -19,6 +19,7 @@
     &__pic {
       z-index: 5;
       margin: 0 auto;
+      margin-bottom: 2rem;
       display: inline-block;
       width: 12rem;
 
@@ -36,13 +37,23 @@
     }
 
     &__header {
-      margin-top: 2rem;
+      // margin-top: 2rem;
       margin-bottom: 1.5rem;
     }
 
     &__btn {
       margin-top: 2.5rem;
       text-align: center;
+    }
+
+    &__desc {
+      &__box {
+        // background-color: $background-white-light;
+        padding: 1rem;
+        box-sizing: initial;
+        margin-bottom: 2rem;
+        // border-radius: 1.2rem;
+      }
     }
 
   }
